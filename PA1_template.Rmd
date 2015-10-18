@@ -89,7 +89,6 @@ for(i in 1:length(data1[,1])){
 ```{r echo = TRUE}
 newsum_raw <- tapply(X = data2$steps, INDEX = data2$date, FUN = sum, na.rm = TRUE, simplify = TRUE)
 newsum <- unname(newsum_raw)
-head(newsum)
 
 qplot(newsum, geom = "histogram" ,
       binwidth = 1000,

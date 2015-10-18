@@ -139,9 +139,8 @@ for(i in 1:length(data1[,1])){
 </ol>
 <pre class="r"><code>newsum_raw &lt;- tapply(X = data2$steps, INDEX = data2$date, FUN = sum, na.rm = TRUE, simplify = TRUE)
 newsum &lt;- unname(newsum_raw)
-head(newsum)</code></pre>
-<pre><code>## [1] 10766.19   126.00 11352.00 12116.00 13294.00 15420.00</code></pre>
-<pre class="r"><code>qplot(newsum, geom = &quot;histogram&quot; ,
+
+qplot(newsum, geom = &quot;histogram&quot; ,
       binwidth = 1000,
       main = &quot;New histogram for total number of steps taken per day&quot;,
       xlab = &quot;total number of steps taken each day&quot;, 

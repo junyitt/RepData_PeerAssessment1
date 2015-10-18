@@ -101,14 +101,7 @@ for(i in 1:length(data1[,1])){
 ```r
 newsum_raw <- tapply(X = data2$steps, INDEX = data2$date, FUN = sum, na.rm = TRUE, simplify = TRUE)
 newsum <- unname(newsum_raw)
-head(newsum)
-```
 
-```
-## [1] 10766.19   126.00 11352.00 12116.00 13294.00 15420.00
-```
-
-```r
 qplot(newsum, geom = "histogram" ,
       binwidth = 1000,
       main = "New histogram for total number of steps taken per day",
